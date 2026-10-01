@@ -1,0 +1,24 @@
+body {
+    background-color: #1c2630;
+    color: #e6edf2;
+    font-family: Georgia, serif;
+}
+
+section {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    color: #e04a3d;
+}
+
+fieldset {
+    margin-bottom: 20px;
+    border: 1px solid #5c7080;
+}
+
+input[type="submit"], input[type="reset"] {
+    padding: 8px 16px;
+}
