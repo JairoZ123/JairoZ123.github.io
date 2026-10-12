@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            //tax rate of 8.25%
+            var TAX_RATE = 0.0825;
+
+            //define a function
+            function calculateTax()
+            {
+                //set of statements that execute when called
+                var amount = parseFloat(document.getElementById("amount").value);
+
+                //make sure the user entered a valid number
+                if (isNaN(amount) || amount < 0)
+                {
+                    alert("Please enter a valid purchase amount.");
+                    document.getElementById("tax").value = "";
+                    document.getElementById("total").value = "";
+                    return;
+                }
+
+                var tax = amount * TAX_RATE;
+                var total = amount + tax;
+
+                //output (rounded to 2 decimal places)
+                document.getElementById("tax").value = tax.toFixed(2);
+                document.getElementById("total").value = total.toFixed(2);
+            }
+        </script>
+    </head>
+    <body>
+        <h2>Sales Tax Calculator (8.25%)</h2>
+        <form>
+            <label for="amount">Price:</label><br>
+            <input type="text" id="amount" name="amount" value=""><br>
+
+            <label for="tax">Tax:</label><br>
+            <input type="text" id="tax" name="tax" value="" disabled><br>
+
+            <label for="total">Total:</label><br>
+            <input type="text" id="total" name="total" value="" disabled><br>
+
+            <input type="button" value="Click Here to Calculate" onclick="calculateTax()">
+
+        </form>
+
+
+    </body>
+</html>
